@@ -8,7 +8,7 @@ echo "STEP: copying .gitconfig and .gitignore_global"
 cp -r ./git/.gitconfig ./git/.gitignore_global ~
 
 
-SHELL="/bin/zsh/"
+SHELL="/bin/zsh"
 PATH_CS_1="$HOME/.local/share/code-server"
 PATH_CS_2="$HOME/.local/share/code-server/User"
 PATH_VS_1="$HOME/Library/Application Support/Code/User"
