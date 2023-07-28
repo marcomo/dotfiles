@@ -7,8 +7,6 @@ echo "Copying dotfiles ..."
 echo "STEP: copying .gitconfig and .gitignore_global"
 cp -r ./git/.gitconfig ./git/.gitignore_global ~
 
-
-SHELL="/bin/zsh"
 PATH_CS_1="$HOME/.local/share/code-server"
 PATH_CS_2="$HOME/.local/share/code-server/User"
 PATH_VS_1="$HOME/Library/Application Support/Code/User"
@@ -24,6 +22,10 @@ if [ "$SHELL" == "/bin/bash" ]; then
   cp ./shell/bash/.bash_profile $HOME/.bash_profile  
 elif [ "$SHELL" == "/bin/zsh" ]; then
   cp ./shell/zsh/.zshrc $HOME/.zshrc
+  if [ "$FRAMEWORK" == "ohmyzsh" ]; then
+    echo "STEP: installing shell framework Oh My ZSH"
+    ./shell/ohmyzsh/install.sh
+  fi  
 elif [ "$SHELL" == "/usr/local/fish" ]; then
   cp ./shell/fish/config.fish $HOME/.config/fish/config.fish
 else
