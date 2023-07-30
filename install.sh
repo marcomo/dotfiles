@@ -24,7 +24,7 @@ elif [ "$SHELL" == "/bin/zsh" ]; then
   cp ./shell/zsh/.zshrc $HOME/.zshrc
   if [ "$FRAMEWORK" == "ohmyzsh" ]; then
     echo "STEP: installing shell framework Oh My ZSH"
-    ./shell/ohmyzsh/install.sh
+    ZSH= ./shell/ohmyzsh/install.sh
   fi  
 elif [ "$SHELL" == "/usr/local/fish" ]; then
   cp ./shell/fish/config.fish $HOME/.config/fish/config.fish
